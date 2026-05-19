@@ -1,0 +1,19 @@
+.card{
+    /* height: 200px; */
+    /* width: 200px; */
+    border: 2px solid black;
+
+}
+.grid-container{
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    grid-template-columns: repeat(3,320px);
+    grid-template-rows: repeat(3,240px);
+    .card:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
