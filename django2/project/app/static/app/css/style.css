@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gold;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.sec1 {
+    .sec1-wrap {
+        button {
+            text-decoration: none;
+            width: 15px;
+        }
+    }
+}
