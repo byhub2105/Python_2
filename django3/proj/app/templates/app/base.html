@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'app/css/style.css'%}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrap">
+                <ul class="header-list flex">
+                    <li class="header-item"><a href="/" class="header-link">Головна</a></li>
+                    <li class="header-item"><a href="/about" class="header-link">Про бібліотеку</a></li>
+                    <li class="header-item"><a href="/stats" class="header-link">Статистика</a></li>
+                    <li class="header-item"><a href="/contacts" class="header-link">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        {%block body%}{% endblock%}
+    </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'app/base.html'%}
+{% load static%}
+{%block title%} Головна сторінка {%endblock%}
+{%block body%}
+<section>
+    <div class="container">
+        <div class="sec1-wrap">
+            <div class="maintext">
+                <p>Бібліотека "Літературний маяк"</p>
+            </div>
+            <div class="sec1-description flex">
+                <div class="text">
+                    <p>Про бібліотеку</p>
+                    <p class="desc">«Ласкаво просимо до міської бібліотеки "Літературний маяк"! Ми — простір, де тиша
+                        стає
+                        натхненням, а
+                        кожна книга — це шлях до нових пригод. У нас ви знайдете понад 20 000 видань: від класики, що
+                        пройшла перевірку часом, до найгучніших бестселерів сучасності. Ми створили затишні зони для
+                        читання, коворкінг для вашої роботи та ігрову кімнату для наймолодших відвідувачів</p>
+                </div>
+                <div class="image"><img src="{% static 'app/images/library.webp' %}" alt="image"></div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock%}

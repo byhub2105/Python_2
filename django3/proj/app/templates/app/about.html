@@ -1,0 +1,41 @@
+{% extends 'app/base.html'%}
+{%load static%}
+{%block title%}Про бібліотеку{% endblock%}
+{%block body%}
+<section>
+    <div class="container">
+        <div class="sec2-wrap">
+            <div class="sec2-library">
+                <p class="sec2-maintext">Історія бібліотеки</p>
+                <p class="sec2-history">Бібліотека «Літературний маяк» була заснована у 1954 році. Спочатку це була
+                    скромна читальна зала у підвальному приміщенні міського будинку культури, яка налічувала лише 500
+                    книг. Проте завдяки ентузіазму першої завідувачки, Марії Іванівни, заклад швидко став осередком
+                    інтелектуального життя міста.</p>
+            </div>
+            <p class="services">Наші послуги</p>
+            <div class="sec2-services flex">
+                <div class="sec2-service flex">
+                    <img src="{% static 'app/images/reading_hall.jpg'%}" alt="logo" class="sec2-image">
+                    <p class="sec2-text">Читальна зала</p>
+                    </img>
+                </div>
+                <div class="sec2-service flex">
+                    <img src="{% static 'app/images/e_books.jpg'%}" alt="" class="sec2-image">
+                    <p class="sec2-text">Електронні книги</p>
+                    </img>
+                </div>
+                <div class="sec2-service flex">
+                    <img src="{% static 'app/images/wifi.png'%}" alt="" class="sec2-image">
+                    <p class="sec2-text">Wi-Fi</p>
+                    </img>
+                </div>
+                <div class="sec2-service flex">
+                    <img src="{% static 'app/images/comp_hall.jpg'%}" alt="" class="sec2-image">
+                    <p class="sec2-text">Комп'ютерний зал</p>
+                    </img>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock%}

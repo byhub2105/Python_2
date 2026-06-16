@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pliant", sans-serif;
+    font-style: normal;
+    color: black;
+}
+
+body {
+    background-color: rgba(195, 233, 29, 0.322);
+}
+
+.container {
+    max-width: 1920px;
+}
+
+.flex {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*----------------- header----------------- */
+.header-wrap {
+    .header-list {
+        margin-top: 90px;
+        justify-self: center;
+        gap: 75px;
+
+        .header-item {
+            font-size: 33px;
+        }
+    }
+}
+
+/*----------------- main----------------- */
+.sec1-wrap {
+    margin-top: 55px;
+
+    .maintext {
+        font-size: 45px;
+        justify-self: center;
+    }
+
+    .sec1-description {
+        margin-top: 45px;
+        font-size: 25px;
+        img{
+            max-width: 350px;
+            max-width: 450px;
+        }
+        .desc {
+            margin-top: 15px;
+            margin-left: 35px;
+            max-width: 950px;
+        }
+    }
+}
+.sec2-wrap{
+    .services{
+        justify-self: center;
+        font-size: 45px;
+    }
+    .sec2-library{
+        .sec2-maintext{
+            font-size: 35px;
+            margin-left: 10px;
+        }
+        .sec2-history{
+            margin: 45px;
+            font-size: 20px;
+            max-width: 720px;
+        }
+    }
+    margin-top: 55px;
+    .sec2-services{
+        margin-top: 35px;
+        justify-self: center;
+        gap: 175px;
+        img{
+            justify-self: center;
+            width: 250px;
+            height: 175px;
+        }
+        .sec2-service{
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            width: 350px;
+            height: 390px;
+            background-color: aliceblue;
+            border-radius: 15px;
+        }
+    }
+}
+.sec4-wrap{
+    margin-top: 45px;
+    .sec4-contacts{
+        justify-self: center;
+        border-radius: 18px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        height: 150px;
+        background-color: aliceblue;
+    }
+}
