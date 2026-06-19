@@ -1,0 +1,38 @@
+{% extends 'app1/base.html'%}
+{% block title%}Детальніше{% endblock%}
+{% block body%}
+<header>
+    <div class="container">
+        <div class="header1-wrap">
+            <div class="header-return">
+                <button class="btn-return"><a href="/">До головної</a></button>
+            </div>
+            <div class="header1-maintext">
+                <p>{{vacancy.title}}</p>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section>
+        <div class="container">
+            <div class="sec2-wrap">
+                <p>
+                    Зарплата: {{vacancy.salary}} $ <br>
+                    Компанія: {{vacancy.company}} <br>
+                    Місто: {{vacancy.city}} <br>
+                    Досвід роботи: {{vacancy.experience}} <br>
+                    Зайнятість: {{vacancy.employment_type}} <br>
+                    Формат роботи: {{vacancy.work_format}} <br> 
+                </p>
+                <h1>Навички</h1>
+                <div class="skills1">
+                    {%for skill in vacancy.skills%}
+                    {{skill}},
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{%endblock%}
