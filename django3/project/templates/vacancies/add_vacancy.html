@@ -1,0 +1,26 @@
+{% extends 'app1/base.html'%}
+{% load static%}
+{% block title%}
+Додати вакансію
+{% endblock%}
+{% block body%}
+<section>
+    <div class="container">
+        <div class="sec4-wrap">
+            <div class="box">
+                <h1>Додати вакансію</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    {{form.title}} <br>
+                    {{form.company}} <br>
+                    {{form.city}} <br>
+                    {{form.description}} <br>
+                    {{form.salary}} <br>
+                    {{form.location}} <br>
+                    <button type="submit">Додати вакансію</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock%}

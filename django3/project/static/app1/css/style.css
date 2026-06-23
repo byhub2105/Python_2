@@ -10,12 +10,15 @@
 
 .container {
     max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 .flex {
     display: flex;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -34,17 +37,20 @@ a{
         font-size: 25px;
     }
 }
-.header1-wrap{
-    .btn-return{
+
+.header1-wrap {
+    .btn-return {
         width: 125px;
         height: 45px;
         font-size: 18px;
     }
-    .header1-maintext{
+
+    .header1-maintext {
         margin: 35px;
         font-size: 33px;
     }
 }
+
 /*------------ main------------- */
 .sec1-wrap {
     justify-content: center;
@@ -56,18 +62,34 @@ a{
         grid-template-columns: repeat(3, 420px);
         grid-template-rows: repeat(3, 320px);
         gap: 85px;
+
         .card {
-            border: 1px solid black ;
-            .card-header{
+            border: 1px solid black;
+
+            .card-header {
                 justify-self: center;
             }
         }
     }
 }
-.sec2-wrap{
+
+.sec2-wrap {
     font-size: 27px;
     margin-left: 10px;
-    .skills1{
+
+    .skills1 {
         font-size: 29px;
+    }
+}
+.sec3-wrap{
+    margin: 25px;
+}
+.sec4-wrap {
+    form{
+        width: 500px;
+    }
+    .box {
+        margin: 25px;
+        margin-left: 35px;
     }
 }

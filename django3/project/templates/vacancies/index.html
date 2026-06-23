@@ -1,0 +1,27 @@
+{% extends 'app1/base.html'%}
+{% load static%}
+{% block title%}Вакансії{% endblock%}
+{%block body%}
+<section>
+    <div class="container">
+        <div class="sec3-wrap">
+            <div class="sec3-form">
+                {%if vacancies%}
+                {%for vacancy in vacancies%}
+                <div class="vacancy">
+                    <h1>{{vacancy.title}}</h1>
+                    <h2>Опис: {{vacancy.description}} <br>
+                        Зарплата: {{vacancy.salary}} <br>
+                        Компанія: {{vacancy.company}} <br>
+                        Місто: {{vacancy.location}}
+                    </h2>
+                </div>
+                {% endfor%}
+                {% else %}
+                <p> Немає вакансій</p>
+                {% endif%}
+            </div>
+        </div>
+    </div>
+</section>
+{%endblock%}
