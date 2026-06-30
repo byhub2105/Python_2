@@ -1,0 +1,23 @@
+{% extends 'movies/base.html'%}
+{% block title%}Додати фільм{% endblock%}
+{% block body%}
+<section>
+    <div class="container">
+        <div class="sec2-wrap">
+            <div class="box">
+                <h1>Додати фільм</h1>
+                <form method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    {{form.title}} <br>
+                    {{form.author}} <br>
+                    {{form.description}} <br>
+                    {{form.year}} <br>
+                    {{form.genre}} <br>
+                    {{form.poster}}
+                    <button type="submit">Додати фільм</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{%endblock%}

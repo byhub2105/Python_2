@@ -1,0 +1,21 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видалення</title>
+    <link rel="stylesheet" href="{% static 'movies/css/style.css'%}">
+</head>
+<body>
+    <form method="post" class="danger-delete flex">
+    {% csrf_token %}
+    <p>Ви впевнені, що хочете видалити цей фільм?</p> <br>
+    
+    <div class="btns">
+    <button type="submit">Підтвердити видалення</button>
+    <a href="/movies/">Скасувати</a>
+    </div>
+</form>
+</body>
+</html>

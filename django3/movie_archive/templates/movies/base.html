@@ -1,0 +1,27 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{% endblock%}</title>
+    <link rel="stylesheet" href="{% static 'movies/css/style.css'%}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrap flex">
+                <div class="header-link"><a href="/">Головна</a></div>
+                <div class="header-link"><a href="/movies">Усі фільми</a></div>
+                <div class="header-link"><a href="/add_movie">Додати фільм</a></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        {% block body%}{% endblock%}
+    </main>
+</body>
+
+</html>
