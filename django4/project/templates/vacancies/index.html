@@ -1,0 +1,43 @@
+{% extends 'app1/base.html'%}
+{% load static%}
+{% block title%}Вакансії{% endblock%}
+{%block body%}
+<div>
+    <form  method="get">
+        <input type="text" name="q" placeholder="Python,Django,..." value="{{ request.GET.q}}">
+        <button type="submit">Пошук</button>
+    </form>
+    <a href="{% url 'parse_jooble'%}"> Завантажити вакансії</a>
+    {% if page_obj %}
+    <ul>
+        {% for vacancy in pade_obj %}
+        <div class="card">
+            <div class="card-body">
+                <h3>{{vacancy.title}}</h3>
+                <p>Компанія: {{vacancy.company}} <br>
+                    Місто: {{vacancy.location}} <br>
+                {{vacancy.description}}</p>
+                {% if vacancy.source_url%}
+                <a href="{{vacancy.source_url}}">Відкрити вакансію</a>
+                {% endif%}
+            </div>
+        </div>
+        {% endfor%}
+    </ul>
+    {% else %}
+    <p>Немає вакансій</p>
+    {% endif %}
+    <div>
+        {% if page_obj.has_previous %}
+        <a href="?page=1">перша</a>
+        <a href="?page={{ page.obj.previous_page_number}}">Назад</a>
+        {% endif%}
+        Сторінка {{pade_obj.number}} з {{page_obj.num_pages}}
+
+        {% if page_obj.has_next %}
+        <a href="?page={{page.obj.next_page_number}}">Далі</a>
+        <a href="?page={{page.obj.paginator.num_pages}}">Остання</a>
+        {% endif%}
+    </div>
+</div>
+{%endblock%}

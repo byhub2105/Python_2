@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pliant", sans-serif;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------------header---------------- */
+.header-wrap {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .header-title {
+        font-size: 35px;
+    }
+
+    .header-count {
+        margin-top: 25px;
+        font-size: 25px;
+    }
+}
+
+.header1-wrap {
+    .btn-return {
+        width: 125px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .header1-maintext {
+        margin: 35px;
+        font-size: 33px;
+    }
+}
+
+/*------------ main------------- */
+.sec1-wrap {
+    justify-content: center;
+    align-items: center;
+
+    .sec1-vacancies {
+        margin-top: 45px;
+        display: grid;
+        grid-template-columns: repeat(3, 420px);
+        grid-template-rows: repeat(3, 320px);
+        gap: 85px;
+
+        .card {
+            border: 1px solid black;
+
+            .card-header {
+                justify-self: center;
+            }
+        }
+    }
+}
+
+.sec2-wrap {
+    font-size: 27px;
+    margin-left: 10px;
+
+    .skills1 {
+        font-size: 29px;
+    }
+}
+.sec3-wrap{
+    margin: 25px;
+}
+.sec4-wrap {
+    form{
+        width: 500px;
+    }
+    .box {
+        margin: 25px;
+        margin-left: 35px;
+    }
+}
