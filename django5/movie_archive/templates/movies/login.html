@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід</title>
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'register'%}">Зареєструватись</a><a href="{%url 'movies'%}">До фільмів</a>
+    </header>
+    <main>
+        <form action="" method="post">
+            {% csrf_token%}
+            {{form.username}}
+            {{form.password}}
+            <button type="submit">Увійти</button>
+        </form>
+    </main>
+</body>
+
+</html>

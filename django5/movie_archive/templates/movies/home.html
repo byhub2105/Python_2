@@ -1,0 +1,7 @@
+{%  extends 'movies/base.html'%}
+{% block title%}Головна{% endblock%}
+{%block body%}
+{%if user.username%}
+<a href="{%url 'profile'%}">Профіль</a>
+{%endif%}
+{%endblock%}

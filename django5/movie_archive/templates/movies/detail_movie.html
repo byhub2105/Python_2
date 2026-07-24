@@ -1,0 +1,20 @@
+{% extends 'movies/base.html'%}
+{% block title%}{{movie.title}}{% endblock%}
+{%block body%}
+<section>
+    <div class="container">
+        <div class="sec2-wrap">
+            {%if movie.poster%}
+            <img src="{{movie.poster.url}}" alt="">
+            {%endif%}
+            <h1>{{movie.title}}</h1>
+            <h3>{{movie.author}} <br>
+                {{movie.description}} <br>
+                {{movie.year}} <br>
+                {{movie.genre}}
+            </h3>
+        </div>
+    </div>
+</section>
+
+{%endblock%}

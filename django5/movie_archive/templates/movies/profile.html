@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редагування профілю</title>
+</head>
+
+<body>
+    <div class="profile-card">
+        <h2>Мій профіль</h2>
+
+<form action="{% url 'profile' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>
+        <label for="id_first_name">Ім'я:</label>
+        {{ form.first_name }}
+        {% if form.first_name.errors %}<span style="color: red;">{{ form.first_name.errors }}</span>{% endif %}
+    </p>
+
+    <p>
+        <label for="id_last_name">Прізвище:</label>
+        {{ form.last_name }}
+        {% if form.last_name.errors %}<span style="color: red;">{{ form.last_name.errors }}</span>{% endif %}
+    </p>
+
+    <p>
+        <label for="id_email">Email:</label>
+        {{ form.email }}
+        {% if form.email.errors %}<span style="color: red;">{{ form.email.errors }}</span>{% endif %}
+    </p>
+
+    <p>
+        <label for="id_bio">Біографія:</label>
+        {{ form.bio }}
+        {% if form.bio.errors %}<span style="color: red;">{{ form.bio.errors }}</span>{% endif %}
+    </p>
+
+    <p>
+        <label for="id_avatar">Аватарка:</label>
+        {{ form.avatar }}
+        {% if form.avatar.errors %}<span style="color: red;">{{ form.avatar.errors }}</span>{% endif %}
+    </p>
+
+    <p>
+        <label for="id_avatar_color">Колір аватара:</label>
+        {{ form.avatar_color }}
+        {% if form.avatar_color.errors %}<span style="color: red;">{{ form.avatar_color.errors }}</span>{% endif %}
+    </p>
+
+    <button type="submit">Зберегти профіль</button>
+</form>
+<a href="{%url 'home'%}">На головну</a>
+    </div>
+</body>
+
+</html>

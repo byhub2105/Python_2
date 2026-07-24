@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pliant", sans-serif;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*-------------- header----------- */
+.header-wrap {
+    margin: 45px;
+    gap: 15px;
+}
+.sec1-movies{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    grid-template-rows: repeat(3,520px);
+    gap: 5px;
+     .movie{
+        align-items: center;
+        border: 2px solid black;
+        flex-direction: column;
+        .movie-img{
+            max-width: 250px;
+            max-height: 250px;
+            img{
+                max-width: 150px;
+                max-height: 150px;
+            }
+        }
+        .movie_context{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .movie_links{
+             gap: 15px;
+             .delete{
+                justify-content: center;
+                align-items: center;
+                width: 75px;
+                height: 25px;
+                background-color: red;
+                color: white;
+             }
+        }
+    } 
+    
+}
+.danger-delete{
+    margin: 50px;
+    p{
+        font-size: 35px;
+    }
+    justify-content: center;
+    flex-direction: column;
+    .btns{
+    button{
+        max-width: 350px;
+        max-height: 70px;
+        font-size: 25px;
+    }
+    a{
+        font-size: 25px;
+    }
+}
+}
+.sec2-wrap{
+    margin: 35px;
+}

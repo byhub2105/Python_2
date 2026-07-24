@@ -1,0 +1,46 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коментарі</title>
+    <link rel="stylesheet" href="{%static 'movies/css/comment.css'%}">
+</head>
+<body>
+    <a href="{% url 'movies'%}">До фільмів</a>
+    <h2>Коментарі до фільму: {{ movie.title }}</h2>
+
+<div class="comments-list">
+    {% for comment in comments %}
+        <div class="comment-item">
+            <div class="comment_text">
+            <strong>{{ comment.author.username }}</strong> 
+            <small>({{ comment.created_at|date:"d.m.Y H:i" }}):</small>
+            <p>{{ comment.text }}</p>
+            </div>
+            {% if comment.author == request.user %}
+                <div class="comment_delete">
+                <form action="{% url 'delete_comment' comment.id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" onclick="return confirm('Ви впевнені, що хочете видалити цей коментар?');" style="color: red; cursor: pointer;">
+                        Видалити
+                    </button>
+                </form>
+                </div>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>Поки немає коментарів. Будьте першим!</p>
+    {% endfor %}
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Надіслати коментар</button>
+</form>
+
+<a href="{% url 'home' %}">Повернутися на головну</a>
+</body>
+</html>
